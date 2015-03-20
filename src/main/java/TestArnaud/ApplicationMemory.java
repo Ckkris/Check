@@ -1,9 +1,7 @@
 package TestArnaud;
 
-import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,12 +9,12 @@ import java.util.List;
 
 @Configuration
 @EnableAutoConfiguration
-public class TestArnaudApplication {
+public class ApplicationMemory {
 
     public static void main(String[] args) {
         //SpringApplication.run(TestArnaudApplication.class, args);
 
-        ConfigurableApplicationContext context = SpringApplication.run(Application.class);
+        ConfigurableApplicationContext context = SpringApplication.run(ApplicationMemory.class);
         ClientRepository repository = context.getBean(ClientRepository.class);
         // save a couple of Clients
         repository.save(new Client("Jack", "Bauer"));
@@ -44,6 +42,12 @@ public class TestArnaudApplication {
         System.out.println("--------------------------------------------");
         for (Client bauer : bauers) {
             System.out.println(bauer);}
+
+
+
+
+
+
         context.close();
     }
 

@@ -28,8 +28,6 @@ public class Client {
 @Override
 public String toString() {
     return String.format("Client[login=%d, nom='%s', prenom='%s']", login, nom, prenom);
-
-
     }
 
 }
