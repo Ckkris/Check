@@ -20,7 +20,7 @@ public class Client {
     protected Client() {
     }
 
-    public Client(String nom, String prenom) {
+    public Client( String nom, String prenom) {
         this.prenom = prenom;
         this.nom = nom;
     }
