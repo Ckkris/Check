@@ -53,14 +53,14 @@ public class ApplicationMemory {
        /* @Override
         public void run(String... strings) throws Exception {*/
         // save a couple of Clients
-        repository.save(new Client("Jack", "Bauer"));
+        repository.save(new Client("Christophe", "Strozik"));
         repository.save(new Client("Chloe", "O'Brian"));
-        repository.save(new Client("Kim", "Bauer"));
+        repository.save(new Client("Kim", "Strozik"));
         repository.save(new Client("David", "Palmer"));
         repository.save(new Client("Michelle", "Dessler"));
         //fetch all Clients
         Iterable<Client> Clients = repository.findAll();
-        System.out.println("Clients found with findAll():");
+        System.out.println("Clients trouvés avec la méthode findAll():");
         System.out.println("-------------------------------");
         for (Client Client : Clients) {
             System.out.println(Client);
@@ -68,13 +68,13 @@ public class ApplicationMemory {
         System.out.println();
         // fetch an individual Client by ID
         Client Client = repository.findOne(1L);
-        System.out.println("Client found with findOne(1L):");
+        System.out.println("Client trouvés avc la méthode findOne(1L):");
         System.out.println("--------------------------------");
         System.out.println(Client);
         System.out.println();
         // fetch Clients by last name
         List<Client> bauers = repository.findByNom("Bauer");
-        System.out.println("Client found with findByNom('Bauer'):");
+        System.out.println("Client trouvés avec la méthode findByNom('Bauer'):");
         System.out.println("--------------------------------------------");
         for (Client bauer : bauers) {
             System.out.println(bauer);}
