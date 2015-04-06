@@ -53,9 +53,9 @@ public class ApplicationMemory {
        /* @Override
         public void run(String... strings) throws Exception {*/
         // save a couple of Clients
-        repository.save(new Client("Christophe", "Strozik"));
+        repository.save(new Client("Christophe", "Bauer"));
         repository.save(new Client("Chloe", "O'Brian"));
-        repository.save(new Client("Kim", "Strozik"));
+        repository.save(new Client("Kim", "Bauer"));
         repository.save(new Client("David", "Palmer"));
         repository.save(new Client("Michelle", "Dessler"));
         //fetch all Clients
