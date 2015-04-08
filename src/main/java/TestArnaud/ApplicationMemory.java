@@ -53,10 +53,10 @@ public class ApplicationMemory {
        /* @Override
         public void run(String... strings) throws Exception {*/
         // save a couple of Clients
-        repository.save(new Client("Christophe", "Bauer"));
+        repository.save(new Client("Bauer", "chris"));
         repository.save(new Client("Chloe", "O'Brian"));
         repository.save(new Client("Kim", "Bauer"));
-        repository.save(new Client("David", "Palmer"));
+        repository.save(new Client("Bauer", "Palmer"));
         repository.save(new Client("Michelle", "Dessler"));
         //fetch all Clients
         Iterable<Client> Clients = repository.findAll();
@@ -68,7 +68,7 @@ public class ApplicationMemory {
         System.out.println();
         // fetch an individual Client by ID
         Client Client = repository.findOne(1L);
-        System.out.println("Client trouvés avc la méthode findOne(1L):");
+        System.out.println("Client trouvés avec la méthode findOne(1L):");
         System.out.println("--------------------------------");
         System.out.println(Client);
         System.out.println();

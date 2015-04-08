@@ -14,14 +14,14 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext context = SpringApplication.run(Config.class);
+        ConfigurableApplicationContext context = SpringApplication.run(Config.class); //Config !!
         ClientRepository repository = context.getBean(ClientRepository.class);
 
         // save a couple of Clients
-        repository.save(new Client("Christophe", "Strozik"));
+        repository.save(new Client("bauer", "chris"));
         repository.save(new Client("Chloe", "O'Brian"));
-        repository.save(new Client("Kim", "Strozik"));
-        repository.save(new Client("David", "Palmer"));
+        repository.save(new Client("Kim", "mm"));
+        repository.save(new Client("bauer", "Palmer"));
         repository.save(new Client("Michelle", "Dessler"));
         //fetch all Clients
         Iterable<Client> Clients = repository.findAll();
@@ -38,8 +38,8 @@ public class Application {
         System.out.println(Client);
         System.out.println();
         // fetch Clients by last name
-        List<Client> bauers = repository.findByNom("Bauer");
-        System.out.println("Client trouvés avec la méthode findByNom('Bauer'):");
+        List<Client> bauers = repository.findByNom("bauer");
+        System.out.println("Client trouvés avec la méthode findByNom('bauer'):");
         System.out.println("--------------------------------------------");
         for (Client bauer : bauers) {
             System.out.println(bauer);}
