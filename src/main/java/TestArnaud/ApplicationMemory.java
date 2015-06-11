@@ -18,6 +18,8 @@ import java.util.List;
         ◦ un [DataSource] qui définit la source de données à utiliser ;
         ◦ un [TransactionManager] qui définit le gestionnaire de transactions à utiliser ;*/
 
+
+CACA !!!
 @EnableAutoConfiguration
 /*l'annotation [EnableAutoConfiguration] est une annotation provenant du projet [Spring Boot]
         Cette annotation demande à Spring Boot via la classe [SpringApplication]
